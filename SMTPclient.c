@@ -84,7 +84,7 @@ int abortOnServerError(char *server_msg) {
 
   error_code = atoi(error_code_string); // convert the string to an int
 
-  if ((error_code <= 200) || (error_code => 355)) { // abort if !(200 <= error_code <= 355)
+  if ((error_code <= 200) || (error_code >= 355)) { // abort if !(200 <= error_code <= 355)
     printf("Aborting on error %d.\n", error_code);
     exit(EXIT_FAILURE);
   }
